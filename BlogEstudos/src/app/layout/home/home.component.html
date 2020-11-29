@@ -1,1 +1,26 @@
-<p>home works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Blog Estudos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Debates</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Materias</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Convites</a>
+          </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <span style="margin-right: 4px" class="text-light">{{ nome }}</span>
+        <button class="btn btn-danger my-2 my-sm-0" type="button" (click) = "Logout()">Sair</button>
+      </div>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
