@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   login = {
-    email: '',
+    login: '',
     senha: ''
   };
 
@@ -18,18 +18,16 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  async onSubmit() {
-    try {
-      const result = await this.accountService.login(this.login);
-      console.log(`Login efetuado: ${result}`);
+  onSubmit() {
+    this.accountService.login(this.login).subscribe( (res) => {
+      window.localStorage.setItem('id', res.id);
+      window.localStorage.setItem('nome', res.nome);
 
-      // navegando pra home componente
+      //
       this.router.navigate(['']);
-    }
-    catch (error)
-    {
-      console.log(error);
-    }
+    },
+      () => { this.accountService.showMessage("Login ou senha incorretos", true) }
+    );
   }
 
   navigateToCreateAccount() {

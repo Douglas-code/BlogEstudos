@@ -10,13 +10,15 @@ import { EMPTY, from, Observable } from 'rxjs';
 })
 export class AccountService {
   baseUrl: string = "https://localhost:44384/api";
+  
   constructor(private snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
-  login(user: any) {
-    return new Promise((resolve) => {
-      window.localStorage.setItem('token', 'meu-token');
-      resolve(true);
-    });
+  login(user: any): Observable<any> {
+    const url = `${this.baseUrl}/Login`;
+    return this.httpClient.post(url, user).pipe(
+      map(res => res),
+      catchError(e => this.errorHandler(e))
+    )
   }
 
   showMessage(msg: string, isError: boolean = false): void
@@ -34,8 +36,7 @@ export class AccountService {
     const url = `${this.baseUrl}/CriarConta`;
 
     return this.httpClient.post(url, account, { responseType: 'text' }).pipe(
-      map(obj => obj),
-      catchError(e=>this.errorHandler(e))
+      map(obj => obj)
     );
   }
 

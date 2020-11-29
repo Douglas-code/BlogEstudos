@@ -11,11 +11,10 @@ export class AuthGuard implements CanActivate {
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean
   {
-    //const idUsuario = window.localStorage.getItem('id');
-    //const nomeUsuario = window.localStorage.getItem('nome');
-    const token = window.localStorage.getItem('token');
+    const idUsuario = window.localStorage.getItem('id');
+    const nomeUsuario = window.localStorage.getItem('nome');
 
-    if (token)
+    if (idUsuario && nomeUsuario)
       return true;
     else
     {
