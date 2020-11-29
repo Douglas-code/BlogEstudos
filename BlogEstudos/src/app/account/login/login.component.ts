@@ -31,4 +31,8 @@ export class LoginComponent implements OnInit {
       console.log(error);
     }
   }
+
+  navigateToCreateAccount() {
+    this.router.navigate(['create-account']);
+  }
 }

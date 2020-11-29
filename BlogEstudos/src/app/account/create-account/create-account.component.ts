@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-account.component.css']
 })
 export class CreateAccountComponent implements OnInit {
+  
+  usuario = {
+    nome: "",
+    email: "",
+    senha: ""
+  };
 
   constructor() { }
 
