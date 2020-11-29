@@ -1,4 +1,6 @@
+import { AccountService } from './../shared/account.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-account',
@@ -9,13 +11,22 @@ export class CreateAccountComponent implements OnInit {
   
   usuario = {
     nome: "",
-    email: "",
+    login: "",
     senha: ""
   };
 
-  constructor() { }
+  constructor(private router: Router, private accountService: AccountService) { }
 
   ngOnInit(): void {
   }
 
+  createAccount() {
+    this.accountService.createAccount(this.usuario).subscribe((ee) => {
+      this.accountService.showMessage("Conta cadastrada com sucesso", false);
+      this.router.navigate(['/login']);
+      console.log(ee)
+    },
+      (res) => console.log(res),
+    );
+  }
 }

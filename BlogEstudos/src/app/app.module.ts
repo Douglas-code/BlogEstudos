@@ -9,6 +9,8 @@ import { LoginComponent } from './account/login/login.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { HomeComponent } from './layout/home/home.component';
 import { AuthenticationComponent } from './layout/authentication/authentication.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -24,7 +26,9 @@ import { AuthenticationComponent } from './layout/authentication/authentication.
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 <h2 class="text-center">Entrar</h2>
 
-<form>
+<form #form = "ngForm">
     <div class="form-group">
         <label>Email</label>
         <input class="form-control" type="email" id="email" [(ngModel)]="login.email" [ngModelOptions]="{standalone: true}" required />
