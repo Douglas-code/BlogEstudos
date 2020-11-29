@@ -11,6 +11,7 @@ import { HomeComponent } from './layout/home/home.component';
 import { AuthenticationComponent } from './layout/authentication/authentication.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
+import { PublicacaoComponent } from './blog/publicacao/publicacao.component';
 
 
 
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     CreateAccountComponent,
     HomeComponent,
     AuthenticationComponent,
+    PublicacaoComponent,
   ],
   imports: [
     BrowserModule,
