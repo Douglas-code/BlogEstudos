@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="container-fluid">
+      <div *ngFor="let l of list; let i = index">
+          <div class="card" style="margin-top: 10px;">
+              <div class="card-header">
+               <h1> {{ list[i].titulo }} - {{ list[i].usuario.nome}}</h1>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">{{ list[i].materia.nome }}</h5>
+                <p class="card-text">{{ list[i].conteudo }}</p>
+              </div>
+              <div clas="card-footer" style="padding-bottom: 5px; padding-left: 5px">
+                  <button class="btn btn-primary center" (click)="addArquivos(list[i].id)">Adicionar Anexos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  

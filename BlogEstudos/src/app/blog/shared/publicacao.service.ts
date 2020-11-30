@@ -24,4 +24,9 @@ export class PublicacaoService {
     let url = `${this.baseUrl}/GetMaterias`;
     return this.httpClient.get(url);
   }
+
+  getMinhasPublicacoes(id) {
+    let url = `${this.baseUrl}/GetMinhasPublicacoes?usuarioId=${id}`;
+    return this.httpClient.get(url);
+  }
 }

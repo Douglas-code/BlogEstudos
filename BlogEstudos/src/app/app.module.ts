@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PublicacaoComponent } from './blog/publicacao/publicacao.component';
 import { CriarPublicacaoComponent } from './blog/criar-publicacao/criar-publicacao.component';
 import { AdicionarArquivosComponent } from './blog/adicionar-arquivos/adicionar-arquivos.component';
+import { MinhasPublicacoesComponent } from './blog/minhas-publicacoes/minhas-publicacoes.component';
 
 
 
@@ -27,6 +28,7 @@ import { AdicionarArquivosComponent } from './blog/adicionar-arquivos/adicionar-
     PublicacaoComponent,
     CriarPublicacaoComponent,
     AdicionarArquivosComponent,
+    MinhasPublicacoesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { MinhasPublicacoesComponent } from './blog/minhas-publicacoes/minhas-publicacoes.component';
 import { AdicionarArquivosComponent } from './blog/adicionar-arquivos/adicionar-arquivos.component';
 import { CriarPublicacaoComponent } from './blog/criar-publicacao/criar-publicacao.component';
 import { PublicacaoComponent } from './blog/publicacao/publicacao.component';
@@ -17,7 +18,8 @@ const routes: Routes = [
       { path: '', redirectTo: 'posts', pathMatch: 'full' },
       { path: 'posts', component: PublicacaoComponent },
       { path: 'create-post', component: CriarPublicacaoComponent },
-      { path: 'add-files', component: AdicionarArquivosComponent}
+      { path: 'add-files/:id', component: AdicionarArquivosComponent},
+      { path: "my-posts", component: MinhasPublicacoesComponent }
     ],
     canActivate: [AuthGuard]
   }, 
@@ -27,7 +29,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: 'login', component: LoginComponent },
-      { path: 'create-account:id', component: CreateAccountComponent }
+      { path: 'create-account', component: CreateAccountComponent }
     ]
   }
 ];
