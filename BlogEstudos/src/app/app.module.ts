@@ -13,6 +13,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { PublicacaoComponent } from './blog/publicacao/publicacao.component';
 import { CriarPublicacaoComponent } from './blog/criar-publicacao/criar-publicacao.component';
+import { AdicionarArquivosComponent } from './blog/adicionar-arquivos/adicionar-arquivos.component';
 
 
 
@@ -25,6 +26,7 @@ import { CriarPublicacaoComponent } from './blog/criar-publicacao/criar-publicac
     AuthenticationComponent,
     PublicacaoComponent,
     CriarPublicacaoComponent,
+    AdicionarArquivosComponent,
   ],
   imports: [
     BrowserModule,
