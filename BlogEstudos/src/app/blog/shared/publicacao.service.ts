@@ -9,8 +9,19 @@ export class PublicacaoService {
   
   constructor(private httpClient: HttpClient) { }
 
+  postPublicacao(post){
+    let url = `${this.baseUrl}/PostPublicacao`;
+
+    return this.httpClient.post(url, post, {responseType: 'text'});
+  }
+
   getPublicacoes(id) {
     let url = `${this.baseUrl}/GetPublicacoes?usuarioId=${id}`;
+    return this.httpClient.get(url);
+  }
+
+  getMaterias() {
+    let url = `${this.baseUrl}/GetMaterias`;
     return this.httpClient.get(url);
   }
 }

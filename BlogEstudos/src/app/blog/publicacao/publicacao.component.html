@@ -1,6 +1,6 @@
 <div class="container">
   <div class="container-fluid">
-    <button type="button" class="btn btn-success right-align" style="margin-top: 10px;">Novo Post</button>
+    <button type="button" class="btn btn-success right-align" style="margin-top: 10px;" (click)="navigateToCriarPublicacao()">Novo Post</button>
     <div *ngFor="let l of list; let i = index;">
         <div class="card" style="margin-top: 10px;">
             <div class="card-header">

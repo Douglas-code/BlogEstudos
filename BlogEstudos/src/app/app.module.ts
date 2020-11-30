@@ -12,6 +12,7 @@ import { AuthenticationComponent } from './layout/authentication/authentication.
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { PublicacaoComponent } from './blog/publicacao/publicacao.component';
+import { CriarPublicacaoComponent } from './blog/criar-publicacao/criar-publicacao.component';
 
 
 
@@ -23,6 +24,7 @@ import { PublicacaoComponent } from './blog/publicacao/publicacao.component';
     HomeComponent,
     AuthenticationComponent,
     PublicacaoComponent,
+    CriarPublicacaoComponent,
   ],
   imports: [
     BrowserModule,

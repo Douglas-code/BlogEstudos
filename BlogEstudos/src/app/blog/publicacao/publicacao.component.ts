@@ -1,5 +1,6 @@
 import { PublicacaoService } from './../shared/publicacao.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-publicacao',
@@ -11,7 +12,7 @@ export class PublicacaoComponent implements OnInit {
   id = window.localStorage.getItem('id'); 
   list: any;
 
-  constructor(private publicacaoService: PublicacaoService) { }
+  constructor(private router: Router,private publicacaoService: PublicacaoService) { }
 
   ngOnInit(): void {
     this.listPublicacao();
@@ -22,5 +23,9 @@ export class PublicacaoComponent implements OnInit {
       this.list = res;
       console.log(this.list);
     }, (err) => console.log(err))
+  }
+
+  navigateToCriarPublicacao() {
+    this.router.navigate(['create-post']);
   }
 }

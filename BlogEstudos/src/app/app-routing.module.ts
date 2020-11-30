@@ -1,3 +1,4 @@
+import { CriarPublicacaoComponent } from './blog/criar-publicacao/criar-publicacao.component';
 import { PublicacaoComponent } from './blog/publicacao/publicacao.component';
 import { AuthGuard } from './account/shared/auth.guard';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       { path: '', redirectTo: 'posts', pathMatch: 'full' },
-      { path: 'posts', component: PublicacaoComponent }
+      { path: 'posts', component: PublicacaoComponent },
+      { path: 'create-post', component: CriarPublicacaoComponent } 
     ],
     canActivate: [AuthGuard]
   }, 
